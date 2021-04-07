@@ -5,6 +5,8 @@ def make_tree
 	
 	read_from_dir @folder_name, @folder_name		# Сформировать список файлов
 
+	sort_hash 																	# Сортируем Хеш (в массиве)
+
 	# view_files_hash	@tree												# Показать полученный список
 
 end
@@ -65,4 +67,16 @@ def read_file_params f
 	#                    acces          modefi         size     name
 	@file_params = [File.atime(f), File.mtime(f), File.size(f), f]
 
+end
+
+
+# (04) =================================================================================
+# Сортируем хеш для правильного показа информации
+def sort_hash
+	sort_hh = @tree.sort
+	### puts sort_hh.inspect
+	@tree ={}
+	sort_hh.each do |duble_item|
+		@tree[duble_item[0]] = duble_item[1]
+	end
 end
