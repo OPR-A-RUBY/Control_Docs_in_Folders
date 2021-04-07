@@ -1,0 +1,15 @@
+Основной алгоритм
+
+1. Получение адреса Стартовой папки
+2. Проверка наличия папки 
+3. Получение списка содержимого внутри папки (с вложениями)
+4. Сохрание в файл и в ХЕШ
+5. Анализ содержимого папки из ХЕША
+6. Вывод отчёта.
+
+CREATE TABLE "Cars" ("ID" INTEGER PRIMARY KEY AUTOINCREMENT, "name" VARCHAR, "price" INTEGER);
+
+INSERT INTO Cars (Id, Name, Prise) VALUES (1, 'BMW', 10000)
+
+INSERT INTO Cars (Name, Prise) VALUES ('BMW', 10000) - если id атоинкримент
+
