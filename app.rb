@@ -24,6 +24,7 @@ puts
 ### '3__Safe hach information to file'
 safe_info
 puts '   ! Готово: Дерево файлов сохранено на диск.'
+puts '   ! Готово: Создан файл html.'
 puts
 
 ### '4__Analiz informations from hach'
