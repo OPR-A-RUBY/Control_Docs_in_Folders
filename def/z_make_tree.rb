@@ -28,7 +28,6 @@ def read_from_dir folder, path      # имя папки и путь к ней
 			if Dir.exist?(filename) 			# этот файл - есть директория?
 				# It is DIR
 				path_cur = path + '/' + filename 
-        # puts "FOLD #{path_cur}"
 
 				read_from_dir filename, path_cur # тогда РЕКУРСИВНО за пускае себя с нов. парам.
 				
@@ -37,12 +36,8 @@ def read_from_dir folder, path      # имя папки и путь к ней
 				if filename != 'Thumbs.db'  # исключаем паразитов 'Thumbs.db' из учёта в список (!)
 					
           path_cur = path + '/' 	
-          # puts "Path: #{path_cur}, file: #{filename}"
           
 					@tree[path_cur] = @tree[path_cur] << filename # пишем параметры в хеш
-          
-          # puts "-- #{filename}"
-          # puts "== #{@tree[path_cur].to_s}"
 				
 				end
 			end	
